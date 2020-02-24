@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,800&display=swap");
+
+/* Fonts */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.title {
+  font-size: 1.8em;
+  font-weight: 400;
+}
+
+.title_2 {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 800;
+}
+
+/* Contenu */
+main {
+  display: block;
+  margin: auto;
+  width: 1200px;
+  height: auto;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ff7300;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.photo {
+  border: 1px solid #004403;
+  padding: 3em;
+  width: 30%;
+  margin: auto;
+}
+
+.header_text {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #004403;
+  padding: 3em;
+  width: 70%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  border: 1px solid #160066;
+}
+
+.content {
+  border: 1px solid #ff0000;
+  display: block;
+  padding: 3em;
+  width: 70%;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ff00f2;
+  padding: 3em;
+  width: 30%;
+  height: auto;
+}
+
+.grid {
+  padding-bottom: 1em;
+  display: grid;
+  grid-template: repeat(1, 60px) / repeat(3, 1fr);
+  gap: 3em;
+}
