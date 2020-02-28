@@ -1,10 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 /* Fonts */
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
+  display: block;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 h1,
@@ -29,16 +32,25 @@ h6 {
 }
 
 /* Contenu */
-main {
-  display: block;
-  margin: auto;
-  width: 1200px;
+
+.wrapper {
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #160066;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ff00f2;
+  width: 32%;
   height: auto;
 }
 
 header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   border: 1px solid #ff7300;
 }
 
@@ -50,9 +62,7 @@ img {
 
 .photo {
   border: 1px solid #004403;
-  padding: 3em;
-  width: 30%;
-  margin: auto;
+  padding: 6em;
 }
 
 .header_text {
@@ -63,12 +73,6 @@ img {
   width: 70%;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: row-reverse;
-  border: 1px solid #160066;
-}
-
 .content {
   border: 1px solid #ff0000;
   display: block;
@@ -76,18 +80,10 @@ img {
   width: 70%;
 }
 
-aside {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ff00f2;
-  padding: 3em;
-  width: 30%;
-  height: auto;
-}
-
 .grid {
-  padding-bottom: 1em;
   display: grid;
   grid-template: repeat(1, 60px) / repeat(3, 1fr);
   gap: 3em;
+  padding: 0em;
+  border: 1px solid #079202;
 }
