@@ -1,57 +1,88 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-
-/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&display=swap");
 
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  display: block;
+  margin: 0em;
   display: flex;
   flex-direction: row-reverse;
+  color: #4a4a4a;
 }
 
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
   text-transform: uppercase;
-  font-weight: 800;
 }
 
-.title {
+h1 {
+  font-size: 4em;
+  font-weight: 500;
+  color: #4b006e;
+  margin-bottom: 0em;
+}
+
+h2 {
   font-size: 1.8em;
-  font-weight: 400;
 }
 
-.title_2 {
-  text-transform: uppercase;
-  font-size: 0.8em;
-  font-weight: 800;
+a {
+  color: white;
+  text-decoration: none;
 }
 
-/* Contenu */
+a:hover {
+  color: #008cff;
 
-.wrapper {
-  width: 68%;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #160066;
+  text-decoration: underline;
+}
+
+p {
+  text-align: justify;
+}
+
+u {
+  text-decoration: none;
+  border-bottom: 2px solid #4b006e;
+}
+
+i,
+hr {
+  color: #4b006e;
+}
+
+i {
+  font-size: 2.5em;
+  margin-top: 0.5em;
+  margin-right: 0.6em;
+}
+
+hr {
+  margin: 0em;
+  margin-bottom: 1.5em;
+  border: 1px solid;
+}
+
+ul {
+  list-style: none;
+  padding: 0.8em 3em;
+}
+
+main {
+  width: 64%;
+  padding: 3.5em;
 }
 
 aside {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ff00f2;
-  width: 32%;
+  width: 36%;
   height: auto;
+  background-color: #4b006e;
+  color: white;
 }
 
 header {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ff7300;
+  padding: 2em 0em;
 }
 
 img {
@@ -60,30 +91,76 @@ img {
   height: auto;
 }
 
-.photo {
-  border: 1px solid #004403;
-  padding: 6em;
-}
-
-.header_text {
+.flex-column {
   display: flex;
   flex-direction: column;
-  border: 1px solid #004403;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col-left {
+  width: 55%;
+  height: auto;
+}
+
+.col-right {
+  width: 100%;
+}
+
+.col-rec-left {
+  width: 60%;
+  height: auto;
+}
+
+.padding-p {
+  padding: 1em 3em;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.nom {
+  font-weight: 300;
+  color: black;
+}
+
+.profession {
+  font-size: 2em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin-top: 0em;
+  margin-bottom: 3em;
+}
+
+.photo {
+  margin: 0;
   padding: 3em;
-  width: 70%;
 }
 
 .content {
-  border: 1px solid #ff0000;
   display: block;
   padding: 3em;
   width: 70%;
 }
 
+.title {
+  background-color: #300046;
+  text-align: center;
+  padding: 0.25em;
+  margin: 0;
+}
+
 .grid {
+  padding: 1em 5em;
   display: grid;
-  grid-template: repeat(1, 60px) / repeat(3, 1fr);
-  gap: 3em;
-  padding: 0em;
-  border: 1px solid #079202;
+  grid-template: repeat(1, 5em) / repeat(3, 1fr);
+  gap: 1em;
+}
+
+#i {
+  color: white;
 }
