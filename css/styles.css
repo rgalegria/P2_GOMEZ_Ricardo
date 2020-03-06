@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&display=swap");
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  margin: 0em;
+  color: #4a4a4a;
   display: flex;
   flex-direction: row-reverse;
-  color: #4a4a4a;
+  min-height: 100%;
+  margin: 0em;
+  padding: 0em;
 }
 
 h1,
@@ -76,7 +82,7 @@ main {
 
 aside {
   width: 36%;
-  height: auto;
+  overflow: auto;
   background-color: #4b006e;
   color: white;
 }
@@ -86,14 +92,23 @@ header {
 }
 
 img {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 100%;
   height: auto;
+  border: 5px solid rgba(0, 0, 0, 0.246);
+  border-radius: 50%;
 }
 
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
 }
 
 .flex-sense {
@@ -138,8 +153,14 @@ img {
 }
 
 .photo {
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 3em;
+}
+
+.photo-header {
+  display: none;
 }
 
 .content {
@@ -156,14 +177,33 @@ img {
 }
 
 .grid {
-  text-align: center;
-  padding: 1em 2em;
   display: grid;
-  grid-template: repeat(1, 2em) / repeat(3, 1fr);
+  grid-template: repeat(1, 5em) / repeat(3, 1fr);
+  padding: 1em 2em;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 4.5em;
+  height: 4.5em;
+  border: 0.1em solid white;
+  border-radius: 50%;
+}
+
+.footer {
+  position: relative;
+  clear: both;
 }
 
 #i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 
 @media only screen and (max-width: 992px) {
@@ -172,6 +212,10 @@ img {
     width: auto;
   }
 
+  header {
+    flex-direction: row-reverse;
+  }
+
   main {
     width: auto;
   }
@@ -180,8 +224,29 @@ img {
     width: auto;
   }
 
+  img {
+    width: 20%;
+    height: 20%;
+  }
+
+  .flex-header {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
   .photo {
     display: none;
+  }
+
+  .header-text {
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .photo-header {
+    display: contents;
+    justify-content: flex-end;
   }
 
   .text-center {
@@ -189,7 +254,7 @@ img {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   body {
     flex-direction: column;
     width: auto;
@@ -203,8 +268,23 @@ img {
     width: auto;
   }
 
+  img {
+    width: 50%;
+    height: 50%;
+  }
+
   .photo {
     display: none;
+  }
+
+  .photo-header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .flex-header {
+    display: flex;
+    flex-direction: column;
   }
 
   .flex-sense {
