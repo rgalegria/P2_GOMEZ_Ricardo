@@ -10,7 +10,7 @@ body {
   color: #4a4a4a;
   display: flex;
   flex-direction: row-reverse;
-  min-height: 100%;
+  min-height: 100vh;
   margin: 0em;
   padding: 0em;
 }
@@ -222,8 +222,8 @@ img {
 }
 
 .footer {
-  position: relative;
   clear: both;
+  margin-top: auto;
 }
 
 .icon {
