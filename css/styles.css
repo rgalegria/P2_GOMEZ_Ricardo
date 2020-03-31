@@ -33,8 +33,9 @@ body {
   color: #4a4a4a;
   display: flex;
   flex-direction: row-reverse;
+  max-width: 1280px;
   min-height: 100vh;
-  margin: 0em;
+  margin: 0em auto;
   padding: 0em;
   background-image: linear-gradient(
     to right,
@@ -52,16 +53,19 @@ h4 {
 
 h1 {
   font-size: 4em;
-  font-weight: 500;
+  font-weight: 400;
   color: #6900be;
-  margin-top: 0;
-  margin-bottom: 0em;
+  margin: 0;
 }
 
 h2 {
-  font-size: 1.8em;
+  font-size: 1.65em;
   color: black;
   margin: 0.5em 0;
+}
+
+h3 {
+  margin-top: 0.8em;
 }
 
 a {
@@ -71,7 +75,6 @@ a {
 
 a:hover {
   color: #008cff;
-
   text-decoration: underline;
 }
 
@@ -178,9 +181,14 @@ main {
 /* ==         SECTION           */
 /*------------------------------*/
 
+section {
+  margin-top: 1.5em;
+}
+
 .flex-date {
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 
 .col-left {
@@ -288,21 +296,32 @@ aside {
 }
 
 /*------------------------------*/
-/* ==       MEDIAS QUERIES       */
+/* ==       MEDIAS QUERIES      */
 /*------------------------------*/
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1000px) {
   /* ==       GENERAL TABLET      */
 
   body {
     flex-direction: column;
-    width: auto;
+  }
+
+  h1 {
+    font-size: 3.5em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  i {
+    font-size: 1.8em;
   }
 
   /* ==       HEADER       */
 
   header {
-    flex-direction: row-reverse;
+    margin: 2em 0 4em 0;
   }
 
   .flex-header {
@@ -313,13 +332,16 @@ aside {
   .header-text {
     display: flex;
     flex-direction: column;
-    flex-flow: wrap;
-    margin: auto;
+    margin: auto auto auto 0;
+  }
+
+  .profession {
+    font-size: 1.5em;
   }
 
   .photo-header {
-    display: flex;
-    width: 32%;
+    display: block;
+    width: 23%;
     margin: auto;
   }
 
@@ -337,6 +359,7 @@ aside {
 
   aside {
     width: auto;
+    border-radius: 43px;
     margin: 0em 3.5em 3.5em 3.5em;
   }
 
@@ -347,9 +370,13 @@ aside {
   .border {
     border-radius: 50px 50px 0 0;
   }
+
+  .icon {
+    font-size: 2.5em;
+  }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   /* ==       GENERAL MOBILE      */
   body {
     flex-direction: column;
@@ -363,7 +390,7 @@ aside {
   }
 
   h2 {
-    font-size: 1.27em;
+    font-size: 1.5em;
   }
 
   i {
@@ -416,10 +443,6 @@ aside {
     margin-bottom: 0em;
   }
 
-  section {
-    margin-top: 1.5em;
-  }
-
   .col-rec-left {
     width: auto;
   }
@@ -431,6 +454,7 @@ aside {
   .flex-date {
     display: block;
     margin: 1.5em 0em 0em 0em;
+    text-align: left;
   }
 
   .dot-circle {
@@ -455,5 +479,12 @@ aside {
 
   .border {
     border-radius: 37px 37px 0 0;
+  }
+
+  .padding-p {
+    padding: 1em 2em;
+  }
+  .icon {
+    font-size: 2.5em;
   }
 }
